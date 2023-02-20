@@ -2,7 +2,6 @@ package com.example.myspace2.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,9 +10,17 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myspace2.Activity.MovieWebActivity;
 import com.example.myspace2.Adapter.MovieAdapter;
 import com.example.myspace2.Individual.Movie;
 import com.example.myspace2.R;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,7 +43,7 @@ public class MovieActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Movie movie=movieList.get(position);
-                Intent intent =new Intent(MovieActivity.this,MovieWebActivity.class);
+                Intent intent =new Intent(MovieActivity.this, MovieWebActivity.class);
                 switch (movie.getName())
                 {
                     case "Titanic":intent.putExtra("movie_url","https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin");
@@ -65,20 +72,21 @@ public class MovieActivity extends AppCompatActivity {
         Call call=client.newCall(request);
         call.enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(Request request, IOException e) {
                 Log.w("result","fail to ask");
             }
+
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(Response response) throws IOException {
                 Gson gson =new Gson();
                 String str=response.body().string();
                 System.out.println(str);
                 List<Movie> jsonsList=gson.fromJson(str,new TypeToken<List<Movie>>(){}.getType());
                 for(int i=0;i<5;i++) {
-                    Movie movie1 = new Movie(R.mipmap.titanic, jsonsList.get(0).getName(), jsonsList.get(0).getData(), jsonsList.get(0).getDirector());
-                    Movie movie2 = new Movie(R.mipmap.yourname, jsonsList.get(1).getName(), jsonsList.get(1).getData(), jsonsList.get(1).getDirector());
-                    movieList.add(movie1);
-                    movieList.add(movie2);
+//                    Movie movie1 = new Movie(R.mipmap.titanic, jsonsList.get(0).getName(), jsonsList.get(0).getData(), jsonsList.get(0).getDirector());
+//                    Movie movie2 = new Movie(R.mipmap.yourname, jsonsList.get(1).getName(), jsonsList.get(1).getData(), jsonsList.get(1).getDirector());
+//                    movieList.add(movie1);
+//                    movieList.add(movie2);
                 }
                 runOnUiThread(new Runnable() {
                     @Override
@@ -87,6 +95,9 @@ public class MovieActivity extends AppCompatActivity {
                     }
                 });
             }
+
+
+
         });
     }
 

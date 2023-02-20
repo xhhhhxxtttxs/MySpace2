@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+
 import com.example.myspace2.Activity.BookActivity;
 import com.example.myspace2.Activity.MovieActivity;
 import com.example.myspace2.Adapter.AdAdapter;

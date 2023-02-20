@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.telecom.Call;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
@@ -19,9 +18,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myspace2.R;
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
@@ -140,12 +147,12 @@ public class BookActivity extends AppCompatActivity {
         Call call=client.newCall(request);
         call.enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(Request request, IOException e) {
                 Log.w("fail","fail to ask");
             }
 
             @Override
-            public void onResponse( Call call,  Response response) throws IOException {
+            public void onResponse(Response response) throws IOException {
                 String str=response.body().string();
 
                 Document document= Jsoup.parse(str);
@@ -168,8 +175,11 @@ public class BookActivity extends AppCompatActivity {
                 text="";
                 handler.sendMessage(message);
             }
+
+
+
+
         });
     }
 }
-
 
