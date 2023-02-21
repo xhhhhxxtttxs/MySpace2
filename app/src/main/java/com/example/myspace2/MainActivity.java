@@ -1,4 +1,4 @@
-package com.example.myspace2.Activity;
+package com.example.myspace2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myspace2.Activity.LoginActivity;
 import com.example.myspace2.Individual.MyApplication;
-import com.example.myspace2.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                Intent intent=new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

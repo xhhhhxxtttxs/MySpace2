@@ -28,8 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="学号/工号"
-        android:drawableLeft="@mipmap/ic_login_account_icon"
-        android:background="@drawable/bac_1"/>
+        android:drawableLeft="@mipmap/ic_login_account_icon"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:background="@drawable/bac_1"
             android:drawableLeft="@mipmap/ic_login_code_icon"
             android:hint="密码"
             android:inputType="textPassword"
@@ -58,7 +56,6 @@
         android:layout_marginLeft="30dp"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:background="@drawable/bac_2"
         android:layout_gravity="center_horizontal"
         android:text="登录"/>
     <LinearLayout

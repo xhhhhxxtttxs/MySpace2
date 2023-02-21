@@ -43,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         password=(EditText) findViewById(R.id.passwordRegister);
         register=(Button) findViewById(R.id.Register);
     }
+
 }
 
 
