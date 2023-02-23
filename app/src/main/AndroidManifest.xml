@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MySpace2"
+        android:theme="@style/FullTheme"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +21,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.WelcomeActivity"></activity>
+        <activity android:name=".Activity.EditActivity"></activity>
+        <activity android:name=".Activity.NotebookActivity"></activity>
+        <activity android:name=".Activity.SearchActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Activity.BookActivity"></activity>
         <activity android:name=".Activity.LoginActivity"></activity>
-        <activity android:name=".Activity.MainpageActivity"></activity>
+        <activity android:name=".Activity.MainpageActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
         <activity android:name=".Activity.MovieActivity"></activity>
         <activity android:name=".Activity.RegisterActivity"></activity>
         <activity android:name=".Activity.MovieWebActivity"></activity>
+        <activity android:name=".Activity.AdActivity"></activity>
         <service android:name=".service.UserService"></service>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

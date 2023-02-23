@@ -1,6 +1,7 @@
 package com.example.myspace2.Adapter;
 
 
+
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,8 @@ import com.example.myspace2.Activity.MainpageActivity;
 import com.example.myspace2.Fragment.AdFragment1;
 import com.example.myspace2.Fragment.AdFragment2;
 import com.example.myspace2.Fragment.AdFragment3;
+
+
 
 public class AdAdapter extends FragmentPagerAdapter {
     private AdFragment1 adfragment1;
@@ -57,4 +60,36 @@ public class AdAdapter extends FragmentPagerAdapter {
     }
 
 }
+//public class AdAdapter extends PagerAdapter {
+//    private ArrayList<View> viewLists;
+//
+//    public AdAdapter() {
+//    }
+//
+//    public AdAdapter(ArrayList<View> viewLists) {
+//        super();
+//        this.viewLists = viewLists;
+//    }
+//
+//    @Override
+//    public int getCount() {
+//        return viewLists.size();
+//    }
+//
+//    @Override
+//    public boolean isViewFromObject(View view, Object object) {
+//        return view == object;
+//    }
+//
+//    @Override
+//    public Object instantiateItem(ViewGroup container, int position) {
+//        container.addView(viewLists.get(position));
+//        return viewLists.get(position);
+//    }
+//
+//    @Override
+//    public void destroyItem(ViewGroup container, int position, Object object) {
+//        container.removeView(viewLists.get(position));
+//    }
+//}
 

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -18,83 +17,96 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btn_a"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮a" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/notebook"
+                android:text="note"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/btn_b"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮b" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/weather"
+                android:text="weather"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/btn_c"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
-
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮c" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:drawableTop="@mipmap/search"
+                android:text="search"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_d"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
-
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮d" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:drawableTop="@mipmap/maps"
+                android:text="map"
+                android:textAllCaps="false" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/btn_e"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
-
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮e" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:drawableTop="@mipmap/camera"
+                android:text="camera"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_f"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮f" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/mail"
+                android:text="mail"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_g"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/tmp"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="按钮g" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/tmp"
+                android:text="按钮g"
+                android:textAllCaps="false" />
 
             <CheckBox
                 android:id="@+id/btn_h"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/more"
                 android:button="@null"
+                android:drawableTop="@drawable/more"
                 android:gravity="center"
-                android:text="更多" />
+                android:text="more" />
 
         </LinearLayout>
 
@@ -102,22 +114,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <Button
                 android:id="@+id/btn_text"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@mipmap/book"
-                android:text="西科小说" />
+                android:drawableTop="@mipmap/read"
+                android:text="read"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn_movie"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:drawableTop="@mipmap/movie"
                 style="?android:attr/borderlessButtonStyle"
-                android:text="西科电影" />
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/movie"
+                android:text="movie"
+                android:textAllCaps="false" />
         </LinearLayout>
 
     </LinearLayout>

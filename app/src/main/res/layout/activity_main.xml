@@ -40,23 +40,25 @@
             android:padding="8dp"
             android:textSize="16sp" />
 
-        <Button
+        <android.widget.Button
             android:layout_width="20dp"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_shape"
             android:text="获取验证码"
             android:textColor="@android:color/white"
             android:textSize="12sp" />
     </LinearLayout>
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btn_login1"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:background="@drawable/btn_shape"
         android:text="登录"
         android:textColor="@android:color/white"
         android:textSize="20sp" />

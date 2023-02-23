@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Activities.MainpageActivity">
+
         <LinearLayout
             android:id="@+id/re1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#4286F5"
+            android:background="@color/text_font_white"
             android:fitsSystemWindows="true"
             android:orientation="horizontal">
 
@@ -26,50 +25,52 @@
                 android:layout_weight="6"
                 android:drawableLeft="@mipmap/iceman"
                 android:drawablePadding="20dp"
-                android:text="今日"
-                android:textColor="#FFFFFF"
+                android:text="MySpace"
+                android:textColor="#164870"
                 android:textSize="25sp" />
         </LinearLayout>
+
         <RadioGroup
             android:id="@+id/btn_group"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="75dp"
             android:layout_alignParentBottom="true"
             android:background="#FFFFFF"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
+
             <RadioButton
                 android:id="@+id/btn_1"
-                android:text="今日"
-                android:textColor="#0997F7"
-                android:drawableTop="@drawable/btn_1"
-                android:button="@null"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_weight="1"
                 android:layout_width="0dp"
-                />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/child"
+                android:gravity="center"
+                android:text="today"
+                android:textColor="#0997F7" />
 
             <RadioButton
                 android:id="@+id/btn_2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableTop="@drawable/btn_2"
-                android:gravity="center"
-                android:text="音乐"
                 android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/music"
+                android:gravity="center"
+                android:text="Music"
                 android:textColor="#0997F7" />
 
             <RadioButton
                 android:id="@+id/btn_3"
-                android:text="网络"
-                android:textColor="#0997F7"
-                android:drawableTop="@drawable/btn_3"
-                android:button="@null"
-                android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_width="0dp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/network"
+                android:gravity="center"
+                android:text="NetWork"
+                android:textColor="#0997F7" />
         </RadioGroup>
 
         <View

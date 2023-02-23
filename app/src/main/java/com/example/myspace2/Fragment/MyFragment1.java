@@ -18,6 +18,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.myspace2.Activity.BookActivity;
 import com.example.myspace2.Activity.MovieActivity;
+import com.example.myspace2.Activity.NotebookActivity;
+import com.example.myspace2.Activity.SearchActivity;
 import com.example.myspace2.Adapter.AdAdapter;
 import com.example.myspace2.R;
 
@@ -27,12 +29,14 @@ public class MyFragment1 extends Fragment {
     Button buttona,buttonb,buttonc,buttond,buttone,buttonf,buttong,buttontext,button_movie;
     CheckBox buttonh;
     boolean isVisible =true;
+
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fg_1, container, false);
         AdAdapter adAdapter = new AdAdapter(getChildFragmentManager());
         advpager = view.findViewById(R.id.advpager);
         advpager.setAdapter(adAdapter);
+
         buttona=view.findViewById(R.id.btn_a);
         buttonb=view.findViewById(R.id.btn_b);
         buttonc=view.findViewById(R.id.btn_c);
@@ -45,6 +49,22 @@ public class MyFragment1 extends Fragment {
         button_movie=view.findViewById(R.id.btn_movie);
         buttontext.setVisibility(View.INVISIBLE);
         button_movie.setVisibility(View.INVISIBLE);
+
+
+        buttona.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), NotebookActivity.class);
+                startActivity(intent);
+            }
+        });
+        buttonc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
         buttontext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,24 +101,24 @@ public class MyFragment1 extends Fragment {
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mHandler.sendEmptyMessageDelayed(1,3000);
-    }
-    @SuppressLint("HandlerLeak")
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case 1:
-                    int count = 3;
-                    int currentItem=advpager.getCurrentItem();
-                    int now=(currentItem+1)%count;
-                    advpager.setCurrentItem(now,true);
-                    this.sendEmptyMessageDelayed(1,3000);
-            }
-        }
-    };
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mHandler.sendEmptyMessageDelayed(1,3000);
+//    }
+//    @SuppressLint("HandlerLeak")
+//    private Handler mHandler = new Handler() {
+//        @Override
+//        public void handleMessage(Message msg) {
+//            switch (msg.what) {
+//                case 1:
+//                    int count = 3;
+//                    int currentItem=advpager.getCurrentItem();
+//                    int now=(currentItem+1)%count;
+//                    advpager.setCurrentItem(now,true);
+//                    this.sendEmptyMessageDelayed(1,3000);
+//            }
+//        }
+//    };
 }
 

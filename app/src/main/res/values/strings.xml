@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MySpace2</string>
+    <string name="title">NoteBook</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_add">添加</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_return">返回</string>
+    <string name="save_succ">保存成功！</string>
+    <string name="save_fail">保存失败！标题或内容不能为空！</string>
+    <string name="title_string">本地音乐</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_exit">退出</string>
+    <string name="str_warning">警告</string>
+    <string name="menu_detail">文件详情</string>
+    <string name="menu_play">开始播放</string>
+    <string name="str_playing">歌曲已经在播放了</string>
 </resources>

@@ -42,12 +42,29 @@ public class LoginActivity extends AppCompatActivity {
                 boolean flag=userService.login(name, pass);
                 if(flag){
                     Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MyApplication.getContext(), MainpageActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), MainpageActivity.class);
                     startActivity(intent);
                     finish();
                 }else{
-                    Toast.makeText(MyApplication.getContext(), "登录失败", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_LONG).show();
                 }
+//                String name=username.getText().toString();
+//                System.out.println(name);
+//                String pass=password.getText().toString();
+//                System.out.println(pass);
+//                UserService userService=new UserService(LoginActivity.this);
+//                boolean flag=userService.login(name, pass);
+//                if(name.equals("admin") && pass.equals("123")){
+//                    Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+////                    Intent intent = new Intent(MyApplication.getContext(), MainpageActivity.class);
+////                    Intent intent = new Intent(LoginActivity.this, MainpageActivity.class);
+//                    Intent intent = new Intent(getApplicationContext(), MainpageActivity.class);
+//                    startActivity(intent);
+//                    finish();
+//                }else{
+////                    Toast.makeText(MyApplication.getContext(), "登录失败", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(), "登录失败", Toast.LENGTH_LONG).show();
+//                }
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
